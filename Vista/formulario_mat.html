@@ -1,0 +1,82 @@
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>proyecto matricula</title>
+    <link rel="stylesheet" href="css/estilo_form.css">
+    <link href="https://fonts.googleapis.com/css2? familia=Girassol&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header" id="inicio">
+        <div class="contenedor head">
+            <h1>Formulario para la solicitud de ingreso</h1>
+        </div>
+    </header>
+    <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
+        <h2>informacion de aspirante</h2>
+        <label for="">tipo de documento:</label>
+        <select name="Tipo_documento" id="tipoD">
+            <option>T.I.</option>
+            <option>C.C.</option>
+            <option>C.E.</option>
+        </select>
+        <label for="">numero de documento:</label>
+        <input type="text"name = "Id_alumno">
+        <label for="">Nombre del aspirante:</label>
+        <input type="text"name = "Nombre">
+        <label for="">Apellido del aspirante:</label>
+        <input type="text"name = "Apellido">
+        <label for="">Edad del aspirante:</label>
+        <input type="text"name = "Edad">
+        <label for="">fecha de nacimiento del aspirante:</label>
+        <input type="date"name = "fecha_na">
+        <label for="">Genero</label>
+        <select name="Genero_a" id="Genero">
+            <option>Femenino</option>
+            <option>Masculino</option>
+        </select>
+        <label for="">Telefono del estudiante:</label>
+        <input type="text"name = "telefono">
+        <label for="">Direccion:</label>
+        <input type="text"name = "Direccion_a">
+        <label for="">Email:</label>
+        <input type="text"name = "email">
+        <label for="">Pais:</label>
+        <input type="text"name = "pais">
+        <label for="">Ciudad:</label>
+        <input type="text"name = "ciudad">
+        
+        <h2>informacion del tutor</h2>
+        <label for="">tipo de documento:</label>
+        <select name="Tipo_documento" id="tipoD">
+            <option>T.I.</option>
+            <option>C.C.</option>
+            <option>C.E.</option>
+        </select>
+        <label for="">numero de identificacion:</label>
+        <input type="text"name = "Id_tutor">
+        <label for="">Nombre del tutor</label>
+        <input type="text" name="Nombre_t">
+        <label for="">Apellido del tutor:</label>
+        <input type="text"name = "Apellido_t">
+        <label for="">parentesco:</label>
+        <input type="text"name = "Parentesco">
+        <label for="">Direccion:</label>
+        <input type="text"name = "Direccion_t">
+        <label for="">Email:</label>
+        <input type="text"name = "Email_t">
+        <label for="">Telefono del tutor:</label>
+        <input type="text"name = "telefono">
+        <label for="">Pais:</label>
+        <input type="text"name = "pais">
+        <label for="">Ciudad:</label>
+        <input type="text"name = "ciudad">
+        <?php
+        include(SolicitarMat.php)
+        ?>
+    </form>
+</body>
+
+</html>
